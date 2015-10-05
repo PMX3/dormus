@@ -1,0 +1,40 @@
+
+<!-- -->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<nav class="navbar high">
+
+		<ul class="nav navbar-nav mynav">
+			
+			 <% if user_signed_in? %>
+			 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete  %></li>
+			 <%else%>
+			 <li>
+			  <%= link_to('LOG IN', new_user_session_path)  %>  
+			  </li>
+			 <%end%>
+		</ul>
+	</nav>
+	
+	<section class="home">
+		<div class="overlay"><div>
+		<div style="width: 400px;margin-left:auto;margin-right:auto;padding-top:7%;">
+			<img src="assets/dormus_logo.png" style="width: 400px;"/>
+		</div>
+	</section>
+	
+	<section class="features" style="text-align:center">
+		
+	</section>
+	
+	<footer class="site-footer">
+		<span style="color: #fff;font-size: 15px;">
+		<a>About Us</a> | <a>Terms and Conditions</a> | Copyright 2015
+		</span>
+	</footer>	
+    <!-- Bootstrap Core JavaScript -->
+</body>
+</html>
