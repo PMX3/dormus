@@ -6,34 +6,80 @@
 </head>
 <body>
 	<nav class="navbar high">
-
 		<ul class="nav navbar-nav mynav">
 			
-			 <% if user_signed_in? %>
+			 <!--<% if user_signed_in? %>
 			 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete  %></li>
 			 <%else%>
 			 <li>
 			  <%= link_to('LOG IN', new_user_session_path)  %>  
 			  </li>
-			 <%end%>
+			 <%end%>-->
 		</ul>
 	</nav>
-	
-	<section class="home">
-		<div class="overlay"><div>
-		<div style="width: 400px;margin-left:auto;margin-right:auto;padding-top:7%;">
-			<%=image_tag "dormus_logo.png", :style => "width: 400px;"%>
+	<section class="container-fluid">
+		<div id="home-bg" class="mouse-bg"></div>
+		<div class="overlay row">
+			<div class="overlay2 col-md-4"  style="padding-top:7%;">
+			<%=image_tag "dormus_logo.png", :style => "width: 100%;"%> 
+				<div id="home-footer">
+					<center>
+					<a style="color: #fff;">About Us</a> | <a style="color: #fff;">Terms and Conditions</a> | Copyright 2015
+					</center>
+				</div>
+			</div>
+			<div class="col-md-8 clear-div row">
+				<div class="col-md-1 clear-div">
+
+				</div>
+				<div class="col-md-10 clear-div">
+					<div class="entry-w" style="height:10%;">
+					
+					</div>
+					<div class="sign_up_form-home">
+					   <div class="card-home log_form">
+						   <center>
+						   <div class="header-home">
+						   <h2>SIGN IN</h2>
+						   </div>
+						   <br>
+						   <div class="card-home-inner">
+							<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+							  <p><%= f.label :email, :class=>"card-home-label" %></p>
+							  <p><%= f.text_field :email %></p>
+
+							  <p><%= f.label :password, :class=>"card-home-label" %></p>
+							  <p><%= f.password_field :password %></p>
+
+							  <% if devise_mapping.rememberable? -%>
+							    <p><%= f.check_box :remember_me %> <%= f.label :remember_me, :class=>"card-home-label" %></p>
+							  <% end -%>
+
+							  <p><%= f.submit "Sign in",:class=>"btn sign-in-home btncont" %></p>
+							<% end -%>
+							</div>
+								Don't have an account yet? <%= render "devise/shared/links" %>
+						</div>
+					  </div>
+				</div>
+				<div class="col-md-1 clear-div">
+
+				</div>
+			</div>
+
 		</div>
-	</section>
 	
-	<section class="features" style="text-align:center">
-		
-	</section>
-    <!-- Bootstrap Core JavaScript -->
+	
 </body>
-<footer class="site-footer">
-	<span style="color: #fff;font-size: 15px;">
-	<a>About Us</a> | <a>Terms and Conditions</a> | Copyright 2015
-	</span>
-</footer>	
+ <!-- Bootstrap Core JavaScript -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/mouse.parallax.js"></script>
+ <script>
+$(document).ready(function() {
+$('#home-bg').mouseParallax({ moveFactor: 3.5 });
+$('#home-logo').mouseParallax({ moveFactor: 10 });
+
+$('body').height(540);
+});
+</script>
 </html>

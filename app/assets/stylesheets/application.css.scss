@@ -30,95 +30,9 @@
      overflow-x: hidden; /*change to x only */
      color: rgb(0, 0, 0);
  }
-
- .graph{
-    padding:0;
-    width: 100%;
-    float:left;
-    margin-top: 1.5px;
-    border-bottom:1px solid #888;
-    /*overflow:hidden; overflow-y:scroll;
-    height:120px; width:100%;*/
- }
- .graph li{
-    position:relative;
-    list-style: none;
-    border-top: 1px solid #888;
-    clear:both;
- }
- .cans{
-    display: block;
-    position:relative;
-    color:white;
-    padding:.32em;
-    background:#A12821;
-    float: left;
+ section{
 
  }
- .inner{
- 	padding: 10px;
- 	background-color:#F1F1F2;
- }
- .card{
-     z-index:11;
-     background-color:#F1F1F2;
-
-      min-height:300px;
-      margin-bottom: 32px;
- }
- 
-
-.marg-cont1{
-  padding-top: 10px;
-}
-.log_form{
-  padding:1.5%;
-  z-index:11;
-}
-.rem{
-  padding-left: 50px;
-}
-.title-v{
-  font-size:3.2em;
-  color:white;
-}
-.v-text{
-  color:white;
-  font-size:1.75em;
-}
-.v-pos{
-  color:white;
-}
-.marg-row{
-  margin-top: 10px;
-  margin-bottom: 25px;
-}
-.v-count{
-  float:right;
-}
-#card-overlay{
-  background-color:rgba(0,0,0,.75);
-               text-align:center;
-               opacity:0;
-
-               -webkit-transition: opacity .25s ease;
--moz-transition: opacity .25s ease;
-
-}
-@charset "utf-8";
-/* CSS Document */
-html {
-    width: 100%;
-    height: 100%;
-}
-
-a {
-	cursor:pointer;
-}
-
-.clear {
-	clear:both; /*start next line*/
-}
 
 .navbar {
 	position: absolute !important;
@@ -159,85 +73,40 @@ a {
 	border-bottom: 2px solid #fff;
 }
 
-
-.home {
-	height: 550px;
+#home-bg {
    	background: image-url("home-img.jpg");
-	background-size:cover;
-	background-position: center center;
-	background-repeat: no-repeat;	
-}
-
-.features {
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.icon1 {
-	height: 200px;
-   	background: url(/assets/obra_icon1.png);
-	background-size: cover;
-	background-position: center center;
+   	background-size: 100%;
 	background-repeat: no-repeat;
-    transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -webkit-transition: all 0.5s linear;
+	
 }
-
-.icon2 {
-	height: 200px;
-   	background: url(/assets/obra_icon2.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-    transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -webkit-transition: all 0.5s linear;
+#home-footer{
+	position:absolute;
+	bottom:0;
+	padding: 10px;
+	width: 100%;
+	color:#ffffff;
+	font-size: 1em;
 }
-
-.icon3 {
-	height: 200px;
-   	background: url(/assets/obra_icon3.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-    transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -webkit-transition: all 0.5s linear;
+#home-logo {
+	background: image-url("dormus_logo.png");
+	width: 400px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:7%;
+	z-index: 150;
+}	
+.mouse-bg {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+	position:fixed;
 }
+.features{
+	position:fixed;
 
-a:hover .icon1 {
-	height: 200px;
-	background: url(/assets/obra_icon1hover.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
 }
-
-a:hover .icon2 {
-	height: 200px;
-	background: url(/assets/obra_icon2hover.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-a:hover .icon3 {
-	height: 200px;
-	background: url(/assets/obra_icon3hover.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-.projects {
-	margin-top: 30px;
-}
-
-.sort {
-	list-style: none;
-}
-
 .filter {
 	margin-top: 30px;
 	list-style: none;
@@ -327,12 +196,19 @@ a:hover .icon3 {
 .contribute {
 	background: #a12821;
 	color: white;
-	width: 300px;
+	width: 250px;
 	height: 60px;
 	border-radius: 0 !important;
 	margin-top: 5px;
 }
-
+.sign-in-home {
+	background: #a12821;
+	color: white;
+	width: 230px;
+	height: 60px;
+	border-radius: 0 !important;
+	margin-top: 5px;
+}
 .btncont {
 	font-size: 20px;
 	font-weight:100;
@@ -340,66 +216,19 @@ a:hover .icon3 {
 	line-height: 50px;
 }
 
-.reward-info {
-	font-size: 20px;
-	margin-top: 60px;
-}
-
-.reward-desc {
-	margin-top: 10px;
-	padding: 30px;
-	background:#f1f1f2;
-	text-align:justify;
-}
-
-.reward-title {
-	color: #a12821;
-	font-size: 22px;
-	font-weight:700;
-	font-family: 'Arvo', serif;
-}
-
-.reward-body {
-	margin-top:-10px;
-	font-size: 15px;
-}
-
-.site-footer {
+.site-footer1 {
 	height: 70px;
 	background: #000000;
 	text-align:center;
 	line-height: 70px;
 	width:100%;
-}
-
-.site-footer span a {
 	color: #fff;
 }
-.seeall {
-color:#000;
-font-size: 20px
-}
-.prj-title {
-	color:#000;
+
+.site-footer1 span a {
+	color: #fff;
 }
 
-.prj-title:hover {
-	color: #000;
-};
-
-.rev-name {
-	font-size: 25px;
-	font-weight: 700;
-}
-.rev-rate {
-	color:#a12821;
-	font-size:25px;
-	font-weight: 700;
-	float:right;
-}
-.rev-com {
-	font-size:15px;
-}
 
 #belowNav{
   padding-top: 50px;
@@ -416,9 +245,39 @@ font-size: 20px
 	position: absolute;
     top: 0;
     left: 0;
-    height: 550px;
+    height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.45);
+    background-color: rgba(0,0,0,0);
+    z-index: 10;
+}
+.overlay2{
+	position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+    z-index: 10;
+}
+.entry-w{
+	position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 10;
+}
+.entry-b{
+	position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.55);
+    z-index: 10;
+}
+.clear-div{
+	position: relative;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,0);
     z-index: 10;
 }
 .high{
@@ -433,10 +292,10 @@ font-size: 20px
   label {
     /*float: left;*/
     width: 100px;
-    text-align: right;
     margin: 2px 10px;
   }
 }
+
 .simple_form .hint {
   clear: left;
   margin-left: 120px;
@@ -454,26 +313,50 @@ font-size: 20px
      -moz-background-size: cover;
      -o-background-size: cover;
 }
-.sign_up_form{
-width:450px;
+.sign_up_form-home{
+width:65%;
 margin-left:auto;
 margin-right:auto;
-padding-top: 75px;
 z-index:11;
 }
-.site-footer1 {
-	height: 9vh;
-	background: #000000;
-	text-align:center;
-	line-height: 70px;
-	width:100%;
-	color:white;
+.sign_up_form{
+width:30%;
+margin-left:auto;
+margin-right:auto;
+z-index:11;
+padding-top: 75px;
 }
 .navbar2 {
 	background: #000000;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 8vf;
+}
+.header-home{
+	color:#ffffff;
+	background-color: rgba(0,0,0,.85);
+	padding: 12px;
+}
+
+ .card{
+z-index:11;
+background-color:#F1F1F2;
+min-height:300px;
+margin-bottom: 32px;
+}
+
+ .card-home{
+z-index:11;
+background-color: rgba(0,0,0,.55);
+min-height:465px;
+margin-bottom: 32px;
+color:#ffffff;
+}
+.card-home-inner{
+	color:#000000;
+}
+.card-home-label{
+	color:#ffffff!important;
 }
 body{
 	overflow-y:hidden;
