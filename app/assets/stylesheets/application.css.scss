@@ -84,8 +84,12 @@ z-index:11;
 background-color: rgba(0,0,0,.55);
 }
 .dropdown-menu>li{
-margin-top:20px;
-font-size: 20px;
+font-family: 'Roboto', sans-serif;
+margin-top:10px;
+font-size: 10px;
+}
+.mynav .dropdown-toggle:hover {
+	background: none !important;
 }
 /*LANDING PAGE END*/
 .navbar {
