@@ -1,0 +1,44 @@
+<section id="home-bg"class="container-fluid overlay row" data-autoheight="true">
+			<div class="overlay2 col-md-4"  style="padding-top:7%;">
+			<%=image_tag "dormus_logo.png", :style => "width: 100%;"%> 
+				<div id="home-footer">
+					<center>
+					<a style="color: #fff;">About Us</a> | <a style="color: #fff;">Terms and Conditions</a> | Copyright 2015
+					</center>
+				</div>
+			</div>
+			<div class="col-md-8 clear-div row">
+				<div class="col-md-1 clear-div">
+
+				</div>
+				<div class="col-md-10 clear-div">
+					<div class="entry-w" style="height:10%;">
+					</div>
+					<div class="sign_up_form-home">
+					   <div class="card-home log_form">
+						   <center>
+						   <div class="header-home">
+						   <h2>SIGN IN</h2>
+						   </div>
+						   <br>
+						   <div class="card-home-inner">
+							<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+							  <p><%= f.label :email, :class=>"card-home-label" %></p>
+							  <p><%= f.text_field :email %></p>
+
+							  <p><%= f.label :password, :class=>"card-home-label" %></p>
+							  <p><%= f.password_field :password %></p>
+
+							  <% if devise_mapping.rememberable? -%>
+							    <p><%= f.check_box :remember_me %> <%= f.label :remember_me, :class=>"card-home-label" %></p>
+							  <% end -%>
+
+							  <p><%= f.submit "Sign in",:class=>"btn sign-in-home btncont-home" %></p>
+							<% end -%>
+							</div>
+								Don't have an account yet? <%= render "devise/shared/links" %>
+						</div>
+				<div class="col-md-1 clear-div">
+
+				</div>
+	</section>

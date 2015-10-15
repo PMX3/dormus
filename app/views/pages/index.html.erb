@@ -1,71 +1,117 @@
+<nav class="navbar high">
+	<ul class="nav navbar-nav mynav">
+		
+		 <% if user_signed_in? %>
+		 
+		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=current_user.email%> <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete  %></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	          </ul>
+        </li>	
+        <%end%>	 
+	</ul>
+</nav>
 
-	<nav class="navbar high">
-		<ul class="nav navbar-nav mynav">
-			
-			 <% if user_signed_in? %>
-			 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete  %></li>
-			 <%end%>-->
-		</ul>
-	</nav>
-	<section class="container-fluid">
-		<div id="home-bg" class="mouse-bg"></div>
-		<div class="overlay row">
-			<div class="overlay2 col-md-4"  style="padding-top:7%;">
-			<%=image_tag "dormus_logo.png", :style => "width: 100%;"%> 
-				<div id="home-footer">
-					<center>
-					<a style="color: #fff;">About Us</a> | <a style="color: #fff;">Terms and Conditions</a> | Copyright 2015
-					</center>
-				</div>
-			</div>
-			<div class="col-md-8 clear-div row">
-				<div class="col-md-1 clear-div">
+<!-- Sidebar -->
+<div id="sidebar" role="navigation">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-				</div>
-				<div class="col-md-10 clear-div">
-					<div class="entry-w" style="height:10%;">
-					
-					</div>
-					<div class="sign_up_form-home">
-					   <div class="card-home log_form">
-						   <center>
-						   <div class="header-home">
-						   <h2>SIGN IN</h2>
-						   </div>
-						   <br>
-						   <div class="card-home-inner">
-							<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-							  <p><%= f.label :email, :class=>"card-home-label" %></p>
-							  <p><%= f.text_field :email %></p>
 
-							  <p><%= f.label :password, :class=>"card-home-label" %></p>
-							  <p><%= f.password_field :password %></p>
-
-							  <% if devise_mapping.rememberable? -%>
-							    <p><%= f.check_box :remember_me %> <%= f.label :remember_me, :class=>"card-home-label" %></p>
-							  <% end -%>
-
-							  <p><%= f.submit "Sign in",:class=>"btn sign-in-home btncont-home" %></p>
-							<% end -%>
-							</div>
-								Don't have an account yet? <%= render "devise/shared/links" %>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-1 clear-div">
-
-				</div>
-			</div>
-
+    <div id="sidebar-nav">
+		<%=image_tag "dormus_logo1.png", :style => "width: 100%; margin-top:40px;"%> 
+        <ul class="nav nav-stacked">
+        <!--li of v-navbar links-->
+        </ul>
+     	<div id="jumbotron-footer">
+			<center>
+			<a style="color: #fff;">About Us</a> | <a style="color: #fff;">Terms and Conditions</a> | Copyright 2015
+			</center>
 		</div>
- <!-- Bootstrap Core JavaScript -->
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/assets/mouse.parallax.js"></script>
- <script>
-$(document).ready(function() {
-$('#home-bg').mouseParallax({ moveFactor: 3.5 });
-$('#home-logo').mouseParallax({ moveFactor: 10 });
+  	</div>
+<!-- Sidebar End -->
+</div>
+<section id="jumbotron-landing" class="container-fluid row">
+	<div class="col-md-4 jumbotron-left-div" style="padding-top:7%;">
+		
+	</div>
+	<div class="col-md-8">
+		<div class="col-md-1"></div>
+		<center>
+		<div class="col-md-10">
+			<div class="sign_up_form-home">
+			   <div class="card-home log_form">
+				   <div class="header-home">
+				   <h2>SIGN IN</h2>
+				   </div>
+				   <br>
+				   <div class="card-home-inner">
+					<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+					  <p><%= f.label :email, :class=>"card-home-label" %></p>
+					  <p><%= f.text_field :email %></p>
 
-$('body').height(540);
-});
-</script>
+					  <p><%= f.label :password, :class=>"card-home-label" %></p>
+					  <p><%= f.password_field :password %></p>
+
+					  <% if devise_mapping.rememberable? -%>
+					    <p><%= f.check_box :remember_me %> <%= f.label :remember_me, :class=>"card-home-label" %></p>
+					  <% end -%>
+
+					  <p><%= f.submit "Sign in",:class=>"btn sign-in-home btncont-home" %></p>
+					<% end -%>
+					</div>
+						Don't have an account yet? <%= render "devise/shared/links" %>
+				</div>
+			</div>
+		</div>
+		</center>
+	</div>
+</section>
+<section id="jumbotron-landing" class="container-fluid row">
+	<div class="col-md-4 jumbotron-left-div" style="padding-top:7%;">
+
+	</div>
+	<div class="col-md-8">
+		<div class="col-md-1"></div>
+		<center>
+		<div class="col-md-10">
+			<div class="sign_up_form-home">
+			   <div class="card-home log_form">
+				   <div class="header-home">
+				   <h2>SIGN IN</h2>
+				   </div>
+				   <br>
+				   <div class="card-home-inner">
+					<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+					  <p><%= f.label :email, :class=>"card-home-label" %></p>
+					  <p><%= f.text_field :email %></p>
+
+					  <p><%= f.label :password, :class=>"card-home-label" %></p>
+					  <p><%= f.password_field :password %></p>
+
+					  <% if devise_mapping.rememberable? -%>
+					    <p><%= f.check_box :remember_me %> <%= f.label :remember_me, :class=>"card-home-label" %></p>
+					  <% end -%>
+
+					  <p><%= f.submit "Sign in",:class=>"btn sign-in-home btncont-home" %></p>
+					<% end -%>
+					</div>
+						Don't have an account yet? <%= render "devise/shared/links" %>
+				</div>
+			</div>
+		</div>
+		</center>
+	</div>
+</section>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
