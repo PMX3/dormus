@@ -86,7 +86,7 @@
 		<div class="col-md-10">
 			<div class="sign_up_form-home">
 				<div class="header-home">
-				   <h2>WE ARE HERE</h2>
+				   <h2>WE ARE HERE</h2> 
 				</div>
 			    <div id="map" class="card-home log_form">
 				    
@@ -112,14 +112,15 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
       "lat": 14.607325,
       "lng": 120.990602,
       "picture": {
-        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+        "url": "https://gcdc2013-know-your-gov.appspot.com/static/img/gmaps.png",
         "width":  36,
         "height": 36
       },
-      "infowindow": "hello!"
+      "infowindow": "Dormus Living Spaces"
     }
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
+  handler.getMap().setZoom(17);
 });
 </script>
