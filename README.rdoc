@@ -1,28 +1,17 @@
-== README
+== DORMUS 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A systems analysis and design class project **MIS 121-C** by Enzo Bautista, Patrick Felizco, Robert Ibay, Sef Remollo, Vaughn Villarico, and Bryan Zerrudo.
 
-Things you may want to cover:
+Things to note:
+* Deployed at: http://128.199.101.198/
+* Ruby version of server: ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
+* Server uses nginx not webrick
+* How to ship changes:
+    1. Switch user to deploy: su deploy
+    2. Go to dormus in www: cd, cd www, cd dormus
+    3. Assign source: source ~/.rvm/scripts/rvm
+    4. Pull: git pull origin master
+    5. If there are changes to db, rake: bundle exec rake db:migrate RAILS_ENV=production
+    6. Precompile assets: bundle exec rake assets:precompile RAILS_ENV=production
+    7. Restart the server: sudo service nginx restart
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
