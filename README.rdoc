@@ -15,3 +15,4 @@ Things to note:
     6. Precompile assets: bundle exec rake assets:precompile RAILS_ENV=production
     7. Restart the server: sudo service nginx restart
 
+ 
