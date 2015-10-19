@@ -1,6 +1,6 @@
 == DORMUS 
 
-A systems analysis and design class project **MIS 121-C** by Enzo Bautista, Patrick Felizco, Robert Ibay, Sef Remollo, Vaughn Villarico, and Bryan Zerrudo.
+A systems analysis and design class project (MIS 121-C) by Enzo Bautista, Patrick Felizco, Robert Ibay, Sef Remollo, Vaughn Villarico, and Bryan Zerrudo.
 
 Things to note:
 * Deployed at: http://128.199.101.198/
