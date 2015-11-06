@@ -4,6 +4,7 @@ A systems analysis and design class project (MIS 121-C) by Enzo Bautista, Patric
 
 Things to note:
 * Deployed at: http://128.199.101.198/
+* SSH to http://128.199.101.198/
 * Ruby version of server: ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
 * Server uses nginx not webrick
 * How to ship changes:
